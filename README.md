@@ -2,7 +2,7 @@
 
 ## How to run the Frontend
 
- To run the frontend app, cd into 'client' and run "npm start"
+ To run the frontend app, cd into 'client' folder and run "npm start"
 
  ## DO NOT RUN THE BACKEND
 
