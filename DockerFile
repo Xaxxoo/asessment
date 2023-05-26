@@ -1,0 +1,33 @@
+ARG NODE_VERSION=18.16.0-buster
+
+FROM node:${NODE_VERSION}
+
+LABEL name="mern-invoice"
+LABEL license="MIT"
+LABEL description="Shepherd Assesment Image"
+
+ENV NODE_ENV=development
+
+ARG APP_HOME=/app
+
+WORKDIR ${APP_HOME}
+
+RUN addgroup --system shepherd \
+  && adduser --system --ingroup shepherd shepherd
+
+
+COPY package*.json ./
+
+RUN npm config set unsafe-perm true
+
+RUN apt upgrade && apt update
+
+RUN npm install --force
+
+COPY --chown=shepherd:shepherd . ${APP_HOME}
+
+RUN chown shepherd:shepherd ${APP_HOME}
+
+USER shepherd
+
+CMD [ "npm","run","dev" ]
