@@ -1,0 +1,36 @@
+export default function Hero() {
+  return (
+    <div className="rounded-xl relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+      <img
+        src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80"
+        alt=""
+        className="absolute inset-0 -z-10 h-full w-full object-cover"
+      />
+      <div
+        className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+        aria-hidden="true"
+      >
+        <div
+          className="h-[68.5625rem] w-[20rem] bg-black"
+        />
+      </div>
+      <div
+        className="absolute -top-52 -left-[10rem] -z-10 blur-3xl sm:top-[-28rem] sm:translate-x-0 sm:transform-gpu"
+        aria-hidden="true"
+      >
+        <div
+          className="aspect-[1097/845] h-[68.5625rem] w-[30rem] bg-black opacity-90"
+        />
+      </div>
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:mx-0">
+          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Discover Top Tutors</h2>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            <span className="block">Find expert instructors to help meet your learning goals with</span>
+            <span className="block">as much flexibility as you need</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}
